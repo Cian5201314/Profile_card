@@ -1,0 +1,153 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; 
+    outline: none;
+    border: none;
+    text-decoration: none;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: lighter;
+}
+
+html{
+    overflow-x: hidden;
+}
+
+body {
+    height: 100vh; 
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    background: radial-gradient( white, rgb(4, 168, 168)); 
+}
+
+.profile-card {
+    outline-style: dotted;
+    width: calc(50vw); 
+    background: linear-gradient(to bottom, teal, orange);
+    padding: none; 
+    text-align: center;
+    box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.3);
+    transition: transform 0.4s ease-in-out, box-shadow 0.4s ease;
+    border-radius: 15px;
+}
+
+.profile-card:hover {
+    transform: scale(1.05) translate(0, -10px);
+    box-shadow: 15px 15px 30px rgba(0, 0, 0, 0.5);
+}
+
+.avatar-img {
+    width: 100%;
+    animation: floatAvatar 2s ease-in-out infinite alternate;
+}
+
+.avatar-box {
+    width: 150px;
+    height: 150px;
+    margin: 0 auto;
+    margin-bottom: 20px;
+    padding: 5px;
+    overflow: hidden;
+}
+
+.avatar-box:hover {
+    transform: rotate(20deg);
+}
+
+.name {
+    margin-top: 15px;
+    color: black;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    padding: 5px;
+}
+.name:hover {
+    transform: translate(0px, -10px);
+    background: linear-gradient(to left, #413e3a, #455054);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    text-decoration: none;
+}
+
+.role {
+    color: var(--primary-color);
+    font-size: 1.2em; 
+    margin-bottom: 10px;
+}
+
+.skills {
+    display: flex;
+    justify-content: space-around; 
+    align-items: center;
+}
+
+.box1, .box2, .box3 {
+    padding: 10px;
+    background-color: transparent; 
+    border: 1px dotted teal;
+    border-radius: 10px;
+    text-align: center;
+    margin: 5px;
+}
+
+.box1:hover {
+    color: teal;
+}
+.box2:hover {
+    color: teal;
+}
+.box3:hover {
+    color: teal;
+}
+
+
+.contact {
+    display: flex;
+    justify-content: space-around;
+    padding: 10px;
+    background: linear-gradient(to left, red, blue);
+    border-radius: 10px;
+    margin-top: 5px;
+}
+
+.icon-large {
+    font-size: 1.5rem; 
+    background: radial-gradient(circle, rgb(177, 128, 128), rgb(103, 207, 207), rgb(61, 61, 221));
+}
+
+.contact a {
+    background: linear-gradient(to left, red, blue);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    text-decoration: none;
+}
+
+.contact a:hover {
+    transform: scale(1.2);
+}
+
+@media (max-width: 500px) {
+    .profile-card {
+        width: 90%; 
+        padding: 10px;
+    }
+    
+    .name {
+        font-size: 1.5rem; 
+    }
+    .skills {
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 300px) {
+    .contact {
+        flex-direction: column;
+        width: 5rem;
+        justify-content: center;
+        align-items: center;
+        margin: 0 auto;
+    }
+}
